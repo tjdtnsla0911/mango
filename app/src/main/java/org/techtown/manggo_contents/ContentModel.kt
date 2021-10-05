@@ -1,4 +1,7 @@
 package org.techtown.manggo_contents
 
-class ContentModel {
-}
+data class ContentModel(
+        val url : String = "",
+        val imageUrl : String = "",
+        var titleText : String =""
+)
