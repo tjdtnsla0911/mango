@@ -1,5 +1,6 @@
 package org.techtown.manggo_contents
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import org.w3c.dom.Text
 
-class rvAdapter(val list : MutableList<ContentModel>) : RecyclerView.Adapter<rvAdapter.ViewHolder>() {
+class rvAdapter(val context : Context ,val list : MutableList<ContentModel>) : RecyclerView.Adapter<rvAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): rvAdapter.ViewHolder {
         var v = LayoutInflater.from(parent?.context).inflate(R.layout.rv_item,parent,false)
@@ -32,7 +33,8 @@ class rvAdapter(val list : MutableList<ContentModel>) : RecyclerView.Adapter<rvA
             var rv_text = itemView.findViewById<TextView>(R.id.rvTextArea)
             //하나한 들어온다한다.
             rv_text.text =  item.titleText
-            Glide.with()
+
+            Glide.with(context).load(item.imageUrl).into(rv_img)
         }
     }
 }

@@ -39,8 +39,32 @@ class MainActivity : AppCompatActivity() {
                 )
         )
 
+        items.add(
+                ContentModel(
+                        "https://www.mangoplate.com/",
+                        "https://mp-seoul-image-production-s3.mangoplate.com/1182605_1629996625728521.jpg?fit=around|738:738&crop=738:738;*,*&output-format=jpg&output-quality=80",
+                        "포비"
+                )
+        )
+
+        items.add(
+                ContentModel(
+                        "https://www.mangoplate.com/",
+                        "https://mp-seoul-image-production-s3.mangoplate.com/1182605_1629996625728521.jpg?fit=around|738:738&crop=738:738;*,*&output-format=jpg&output-quality=80",
+                        "포비"
+                )
+        )
+
+        items.add(
+                ContentModel(
+                        "https://www.mangoplate.com/",
+                        "https://mp-seoul-image-production-s3.mangoplate.com/1182605_1629996625728521.jpg?fit=around|738:738&crop=738:738;*,*&output-format=jpg&output-quality=80",
+                        "포비"
+                )
+        )
+
         var recyclerView = findViewById<RecyclerView>(R.id.rv)
-        var rvAdater = rvAdapter(items)
+        var rvAdater = rvAdapter(baseContext,items)
         recyclerView.adapter = rvAdater
         //이러면 두줄로된다. (원래는 레이아웃매니저임)
         recyclerView.layoutManager = GridLayoutManager(this,2)
