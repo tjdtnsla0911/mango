@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
                 )
         )
 
-        var recyclerView = findViewById<RecyclerView>(R.id.rv)
+        var recyclerView = findViewById<RecyclerView>(R.id.rv).setOnClickListener()
         var rvAdater = rvAdapter(baseContext,items)
         recyclerView.adapter = rvAdater
         //이러면 두줄로된다. (원래는 레이아웃매니저임)
